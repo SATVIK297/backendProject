@@ -7,7 +7,21 @@ import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
 
 
+//asyn c function returns promise 
+
  connectDB()
+ .then(()=>{
+  app.listen(process.env.PORT || 8000 , ()=>{
+    console.log(`server started at ${process.env.PORT}`);
+  })
+ })
+ .catch((err)=>{
+  console.log("connection failed" ,err);
+ })
+
+
+
+//cookie-parser
 
 
 
@@ -25,9 +39,6 @@ import connectDB from "./db/index.js";
 
 
 
-
-
- 
 // import express from "express"
 
 // const app = express()
