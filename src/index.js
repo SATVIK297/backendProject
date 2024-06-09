@@ -5,7 +5,7 @@ dotenv.config({
 import mongoose  from "mongoose"; 
 import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 
 //asyn c function returns promise 
 
@@ -16,7 +16,7 @@ import connectDB from "./db/index.js";
   })
  })
  .catch((err)=>{
-  console.log("connection failed" ,err);
+  console.log("connection failed hogya" ,err);
  })
 
 
